@@ -1,5 +1,6 @@
 {
   "name": "portifolio",
+  "homepage": "https://gabriellatcc.github.io/gabriella-portifolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,10 +8,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "/predeploy": "Predeploy script to build the project before deploying",
+    "predeploy": "npm run build",
+    "/deploy": "Deploy script to publish the project to GitHub Pages",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.107.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
