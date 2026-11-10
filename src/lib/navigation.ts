@@ -3,9 +3,9 @@
 // ] as const
 
 export const navigationSections = [
-    { label: 'About', to: '/about' },
-    { label: 'Tech Stack', to: '/tech-stack' },
-    { label: 'Projects', to: '/projects' },
-    { label: 'Experience', to: '/experience' },
-    { label: 'Education', to: '/education' },
+    { label: 'About', to: '/home', hash: 'about' },
+    { label: 'Tech Stack', to: '/home', hash: 'tech-stack' },
+    { label: 'Projects', to: '/home', hash: 'projects' },
+    { label: 'Experience', to: '/home', hash: 'experience' },
+    { label: 'Education', to: '/home', hash: 'education' },
 ] as const
