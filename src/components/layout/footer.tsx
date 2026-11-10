@@ -28,26 +28,25 @@ export function Footer() {
                 <div>
                     <p className={styles.heading}>{FOOTER_TEXT.freelanceTitle}</p>
                     <p className={`${styles.body} max-w-md`}>{FOOTER_TEXT.freelanceBody}</p>
-                    <div className="relative mt-6 overflow-hidden rounded-xl border border-primary/20 bg-linear-to-br from-card/80 to-muted/30 p-4 backdrop-blur-md shadow-lg">
+                    <div className="relative mt-4 overflow-hidden rounded-xl border border-primary/20 bg-linear-to-br from-card/80 to-muted/30 px-4 py-2 backdrop-blur-md shadow-lg">
                         <div className="absolute -right-10 -top-10 size-24 rounded-full bg-primary/10 blur-2xl pointer-events-none" />
-
-                        <div className="relative z-10 flex flex-col gap-2.5">
-                            <div className="flex items-center gap-2">
-                                <span className="relative flex size-2">
-                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ring opacity-75 dark:bg-chart-2" />
-                                    <span className="relative inline-flex size-2 rounded-full bg-ring dark:bg-chart-2" />
-                                </span>
-                                <span className="text-xs font-medium text-ring tracking-wide dark:text-chart-2">
-                                    Available for new projects
-                                </span>
-                            </div>
-
-                            <div className="flex items-center gap-2 text-xs text-muted-foreground tabular-nums pt-1 border-t border-border/40">
-                                <Clock className="size-3.5 shrink-0 text-primary" />
-                                <div className="flex flex-col">
-                                    <span className="text-foreground font-medium">{SCHEDULE.days}</span>
-                                    <span>{SCHEDULE.hours}</span>
-                                </div>
+                        <div className="relative z-10 flex items-center gap-2">
+                            <span className="relative flex size-2">
+                                <span className="absolute inline-flex size-full animate-ping rounded-full bg-ring opacity-75 dark:bg-chart-2" />
+                                <span className="relative inline-flex size-2 rounded-full bg-ring dark:bg-chart-2" />
+                            </span>
+                            <span className="text-xs font-medium text-ring tracking-wide dark:text-chart-2">
+                                Available for new projects
+                            </span>
+                        </div>
+                    </div>
+                    <div className="relative mt-3 overflow-hidden rounded-xl border border-primary/20 bg-linear-to-br from-card/80 to-muted/30 px-4 py-2 backdrop-blur-md shadow-lg">
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground tabular-nums">
+                            <Clock className="size-3.5 shrink-0 text-primary" />
+                            <div className="flex flex-row gap-1">
+                                <span className="text-foreground font-medium">{SCHEDULE.days}</span>
+                                <span className='border-r'></span>
+                                <span>{SCHEDULE.hours}</span>
                             </div>
                         </div>
                     </div>
