@@ -1,4 +1,4 @@
-export const THEME_STORAGE_KEY = "portifolio-theme";
+export const THEME_STORAGE_KEY = "portfolio-theme";
 
 export type Theme = "light" | "dark";
 

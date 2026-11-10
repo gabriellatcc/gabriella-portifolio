@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     tanstackRouter({ target: 'react', autoCodeSplitting: true }),
     react(),tailwindcss()],
-  base: '/gabriella-portifolio',//setting github pages
+  base: '/portfolio',//setting github pages
   resolve: {
     alias: {
       '@': path.resolve(import.meta.dirname, './src'),
