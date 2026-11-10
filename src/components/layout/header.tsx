@@ -36,9 +36,7 @@ export function Header() {
                 /&gt;
                 </span>
             </div>
-
             <div className="flex items-stretch gap-3 md:gap-6">
-                {/* Desktop */}
                 <nav className="hidden md:flex items-stretch gap-6">
                 {links.map(({ label, to }) => (
                     <Link
@@ -52,50 +50,56 @@ export function Header() {
                     </Link>
                 ))}
                 </nav>
-
                 <div className="flex items-center">
                     <ThemeSwitch />
                 </div>
-
                 <Sheet>
                     <SheetTrigger
-                    render={
+                        render={
                         <Button
-                        variant="ghost"
-                        size="icon"
-                        className="md:hidden self-center"
-                        aria-label="Abrir menu"
+                            variant="ghost"
+                            size="icon"
+                            className="md:hidden self-center"
+                            aria-label="Abrir menu"
                         />
-                    }
+                        }
                     >
-                    <Menu className="size-6" />
+                        <Menu className="size-6" />
                     </SheetTrigger>
 
-                <SheetContent side="right" className="w-64 bg-sidebar p-0">
-                    <SheetHeader className="border-b border-border">
-                    <SheetTitle>Menu</SheetTitle>
-                    </SheetHeader>
+                    <SheetContent
+                        side="right"
+                        className="w-72 gap-0 bg-sidebar text-sidebar-foreground border-sidebar-border p-0"
+                    >
+                        <SheetHeader className="px-5 pt-5 pb-2">
+                        <SheetTitle className="text-2xl font-bold text-sidebar-foreground">
+                            <span className="text-sidebar-primary">&lt;</span>
+                            Gabriella's Portfolio
+                            <span className="text-sidebar-primary">/&gt;</span>
+                        </SheetTitle>
+                        </SheetHeader>
 
-                    <nav className="flex flex-col py-2">
+                        <nav className="flex flex-col px-5 border-t border-sidebar-border">
                         {links.map(({ label, to }) => (
-                        <SheetClose
+                            <SheetClose
                             key={to}
                             render={
-                            <Link
+                                <Link
                                 to={to}
-                                className={styles.mobileLink}
+                                className="border-b border-sidebar-border py-4 text-lg font-semibold text-sidebar-foreground transition-colors hover:text-sidebar-primary"
                                 activeProps={{
-                                className: 'text-foreground font-semibold bg-accent/50',
+                                    className:
+                                    'border-b border-sidebar-border py-4 text-lg font-semibold text-sidebar-primary',
                                 }}
-                            />
+                                />
                             }
-                        >
+                            >
                             {label}
-                        </SheetClose>
+                            </SheetClose>
                         ))}
-                    </nav>
-                </SheetContent>
-                </Sheet>
+                        </nav>
+                    </SheetContent>
+                    </Sheet>
             </div>
             </div>
         </div>
