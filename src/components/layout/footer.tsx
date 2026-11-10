@@ -1,75 +1,100 @@
-import { Link } from '@tanstack/react-router'
-import { navigationSections } from '@/lib/navigation'
-import { FaGithub, FaLinkedin } from "react-icons/fa"
-import { SITE, CONTACT } from '@/lib/userinfo'
-import { Mail } from 'lucide-react'
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { ArrowUpRight, Clock, Mail, MapPin } from 'lucide-react'
+import { SITE, CONTACT, LOCATION, SCHEDULE, FOOTER_TEXT, LINKS } from '@/lib/userinfo'
+
+const contactLinks = [
+    { href: LINKS.email, label: CONTACT.email, Icon: Mail },
+    { href: LINKS.whatsapp, label: CONTACT.whatsapp, Icon: FaWhatsapp },
+]
+
+const socialLinks = [
+    { href: LINKS.linkedin, label: 'LinkedIn', Icon: FaLinkedin },
+    { href: LINKS.github, label: 'GitHub', Icon: FaGithub },
+]
+
+const styles = {
+    heading: 'uppercase label-technical mb-3 font-bold text-muted-foreground/80',
+    body: 'text-xs leading-relaxed text-muted-foreground',
+    contactLink: 'inline-flex items-center gap-1 text-sm text-sidebar-foreground origin-left transition-transform duration-200 hover:scale-105 hover:text-sidebar-primary',
+    contactIcon: 'inline-block mr-1 mt-0.5 size-4',
+    socialLink: 'inline-flex items-center',
+    socialIcon: 'size-10 shrink-0 border-2 text-sidebar-foreground p-2 rounded-full hover:border-sidebar-ring transition-transform duration-200 hover:scale-105',
+}
 
 export function Footer() {
     return (
         <footer className="bg-background text-secondary-foreground border-t border-border">
-            <p className="text-xl font-bold text-foreground/90">
-                        Gabriella's Portifolio
-            </p>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3 mb-6 max-w-6xl mx-auto px-4 py-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 max-w-6xl mx-auto px-4 py-8">
                 <div>
-                    <p className="uppercase label-technical mb-2 font-bold text-muted-foreground/80">
-                        About
-                    </p>
-                    <p className="text-xs leading-relaxed text-muted-foreground">
-                        {SITE.description}
-                    </p>
+                    <p className={styles.heading}>{FOOTER_TEXT.freelanceTitle}</p>
+                    <p className={`${styles.body} max-w-md`}>{FOOTER_TEXT.freelanceBody}</p>
+                    <div className="relative mt-6 overflow-hidden rounded-xl border border-primary/20 bg-linear-to-br from-card/80 to-muted/30 p-4 backdrop-blur-md shadow-lg">
+                        <div className="absolute -right-10 -top-10 size-24 rounded-full bg-primary/10 blur-2xl pointer-events-none" />
+
+                        <div className="relative z-10 flex flex-col gap-2.5">
+                            <div className="flex items-center gap-2">
+                                <span className="relative flex size-2">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ring opacity-75 dark:bg-chart-2" />
+                                    <span className="relative inline-flex size-2 rounded-full bg-ring dark:bg-chart-2" />
+                                </span>
+                                <span className="text-xs font-medium text-ring tracking-wide dark:text-chart-2">
+                                    Available for new projects
+                                </span>
+                            </div>
+
+                            <div className="flex items-center gap-2 text-xs text-muted-foreground tabular-nums pt-1 border-t border-border/40">
+                                <Clock className="size-3.5 shrink-0 text-primary" />
+                                <div className="flex flex-col">
+                                    <span className="text-foreground font-medium">{SCHEDULE.days}</span>
+                                    <span>{SCHEDULE.hours}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <p className="uppercase label-technical mb-2 font-bold text-muted-foreground/80">
-                        Navigation
-                    </p>
-                    <nav className="space-y-1.5 text-sm text-muted-foreground">
-                        <ul>
-                            <li>
-                                <Link to="/home" className="hover:text-muted-foreground">
-                                    Home
-                                </Link>
-                            </li>
-                            {navigationSections.map((item) => (
-                            <li key={item.to}>
-                                <Link to={item.to} className="hover:text-muted-foreground">
-                                {item.label}
-                                </Link>
-                            </li>
-                            ))}
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <p className="uppercase label-technical mb-2 font-bold text-muted-foreground/80">
-                        Contact
-                    </p>
-                    <nav className="space-y-1.5 text-sm text-muted-foreground">
-                        <ul>
-                            <li>
-                                <a href={`mailto:${CONTACT.email}`} className="hover:text-muted-foreground">
-                                    <Mail className="inline-block mr-1 mt-0.5 size-4" />
-                                    {CONTACT.email}
+                    <p className={styles.heading}>{FOOTER_TEXT.contactTitle}</p>
+                    <p className={styles.body}>{FOOTER_TEXT.contactBody}</p>
+                    <ul className="mt-3 flex flex-col gap-1 text-sm text-muted-foreground">
+                        {contactLinks.map(({ href, label, Icon }) => (
+                            <li key={href}>
+                                <a href={href} className={styles.contactLink}>
+                                    <Icon className={styles.contactIcon} />
+                                    {label}
                                 </a>
                             </li>
-                            <li>
-                                <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground">
-                                    <FaLinkedin className="inline-block mr-1 mt-0.7" />
-                                    LinkedIn
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                        ))}
+                    </ul>
+                    <a
+                        href={LOCATION.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group mt-10 inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-sidebar-primary transition-colors"
+                    >
+                        <MapPin className="size-4 shrink-0" />
+                        {LOCATION.label}
+                        <ArrowUpRight className="size-3.5 shrink-0 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
+                    </a>
                 </div>
             </div>
-            <div className="flex justify-between max-w-6xl mx-auto px-4 py-2 border-t border-border">
-                <p className="mt-4 text-center md:text-left text-sm text-muted-foreground/60">
-                © {new Date().getFullYear()} Gabriella Corrêa. All rights reserved.
-                </p>
-                <div className="flex mt-2 text-center md:text-left text-sm text-muted-foreground/60">
-                    Developed by
-                    <FaGithub className="inline-block ml-2 mr-1 mt-0.5" />
-                    <a href="https://github.com/gabriellacorrea" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/70 hover:text-muted-foreground transition-colors">gabriellatcc</a>
+
+            <div className="border-t border-border">
+                <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col items-center gap-2 text-sm text-muted-foreground/60 md:flex-row md:justify-between">
+                    <p>© {new Date().getFullYear()} {SITE.author}. All rights reserved.</p>
+                    <div className="flex items-center gap-4">
+                        {socialLinks.map(({ href, label, Icon }) => (
+                            <a
+                                key={href}
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={label}
+                                className={styles.socialLink}
+                            >
+                                <Icon className={styles.socialIcon} />
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
         </footer>
