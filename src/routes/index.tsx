@@ -1,11 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { ProjectsSection } from "@/components/home/projects-section"
-// import { ExperienceSection } from "@/components/home/experience-section"
-// import { EducationSection } from "@/components/home/education-section"
-// import { AboutSection } from "@/components/home/about-section"
-// import { TechSection } from "@/components/home/tech-section"
+// import { ExperienceSection } from "@/components//experience-section"
+// import { EducationSection } from "@/components//education-section"
+// import { AboutSection } from "@/components//about-section"
+// import { TechSection } from "@/components//tech-section"
 
-export const Route = createFileRoute('/home')({
+export const Route = createFileRoute('/')({
   component: RouteComponent,
 })
 

@@ -18,7 +18,7 @@ const styles = {
     mobileLink: 'block px-4 py-3 text-secondary-foreground/70 hover:text-chart-4 hover:bg-accent/50 transition-colors',
 }
 
-const links = [{ label: 'Home', to: '/home' }, ...navigationSections]
+const links = [{ label: 'Home', to: '/' }, ...navigationSections]
 
 export function Header() {
     return (
