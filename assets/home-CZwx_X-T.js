@@ -1,0 +1,1 @@
+import{t as e}from"./index-Ce3CoI4J.js";var t=e();function n(){return(0,t.jsx)(`div`,{children:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.`})}export{n as component};
