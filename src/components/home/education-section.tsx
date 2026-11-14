@@ -30,7 +30,7 @@ export function EducationSection() {
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card className="relative overflow-hidden border-border/80 shadow-md transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                <Card className="relative overflow-hidden border-border/80 shadow-md transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:scale-101">
                     <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-chart-1 to-chart-4" />
                     <CardHeader className="pb-3">
                         <div className="flex items-start gap-3.5">
@@ -45,7 +45,7 @@ export function EducationSection() {
                         </div>
                         <CardAction>
                             <Button
-                                variant="outline"
+                                variant="blue"
                                 size="sm"
                                 className="gap-1.5 text-xs font-medium hover:border-primary/50 hover:bg-primary/10"
                                 render={
@@ -95,7 +95,7 @@ export function EducationSection() {
                         </div>
                     </CardFooter>
                 </Card>
-                <Card className="relative overflow-hidden border-border/80 shadow-md transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                <Card className="relative overflow-hidden border-border/80 shadow-md transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:scale-101">
                     <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-chart-1 to-chart-4" />
                     <CardHeader className="pb-3">
                         <div className="flex items-center gap-2.5">
