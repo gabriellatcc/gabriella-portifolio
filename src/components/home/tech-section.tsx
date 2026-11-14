@@ -12,7 +12,7 @@ const categories = [
 ] as const;
 
 export function SkillsSection() {
-  const iconBoxClasses = `h-8 w-8 rounded border border-border bg-background p-1`;
+  const iconBoxClasses = `h-8 w-8 rounded border border-border p-1`;
 
   return (
     <section id="skills" className="py-20">

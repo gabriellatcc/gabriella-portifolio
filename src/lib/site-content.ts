@@ -1,28 +1,14 @@
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import {
-    faPhp,
-    faLaravel,
-    faJava,
-    faReact,
-    faJs,
-    faDocker,
-    faLinux,
-    faGitAlt,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-    faCode,
-    faN,
-    faDatabase,
-    faServer,
-    faNetworkWired,
-    faRoute,
-    faWind,
-    faBolt,
-    faFileContract,
-    faTerminal,
-} from "@fortawesome/free-solid-svg-icons";
-import type { IconType } from "react-icons"; // <-- Adicione esse import
+import { TbBrandLaravel } from "react-icons/tb";
+import type { IconType } from "react-icons";
 import { DiVisualstudio } from "react-icons/di";
+import { BiLogoTypescript, BiLogoJavascript, BiLogoPostgresql } from "react-icons/bi";
+import { SiTanstack, SiTailwindcss, SiVite, SiSwagger, SiPhp, SiDocker, SiHtml5 } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
+import { RiJavaLine, RiNextjsFill, RiReactjsLine } from "react-icons/ri";
+
+import { TbBrandMysql } from "react-icons/tb";
+import { FcLinux } from "react-icons/fc";
 
 export interface Skill {
     name: string;
@@ -106,24 +92,24 @@ export const portfolioData: DeveloperProfile = {
         gpa: "8.21 / 10",
     },
     skills: [
-        { name: "PHP", category: "backend", icon: faPhp, color: "text-indigo-400" },
-        { name: "Laravel", category: "backend", icon: faLaravel, color: "text-red-400" },
-        { name: "Java", category: "backend", icon: faJava, color: "text-orange-400" },
-        { name: "TypeScript", category: "frontend", icon: faCode, color: "text-blue-400" },
-        { name: "React", category: "frontend", icon: faReact, color: "text-cyan-400" },
-        { name: "Next.js", category: "frontend", icon: faN, color: "text-slate-200" },
-        { name: "JavaScript", category: "frontend", icon: faJs, color: "text-yellow-400" },
-        { name: "MySQL", category: "backend", icon: faDatabase, color: "text-blue-500" },
-        { name: "PostgreSQL", category: "backend", icon: faServer, color: "text-cyan-500" },
-        { name: "Docker", category: "tools", icon: faDocker, color: "text-sky-400" },
-        { name: "Linux (Mint)", category: "tools", icon: faLinux, color: "text-emerald-400" },
-        { name: "Git", category: "tools", icon: faGitAlt, color: "text-orange-500" },
-        { name: "TanStack Query", category: "frontend", icon: faNetworkWired, color: "text-rose-400" },
-        { name: "TanStack Router", category: "frontend", icon: faRoute, color: "text-amber-400" },
-        { name: "Tailwind CSS", category: "frontend", icon: faWind, color: "text-teal-400" },
-        { name: "Vite", category: "frontend", icon: faBolt, color: "text-purple-400" },
-        { name: "OpenAPI / Swagger", category: "tools", icon: faFileContract, color: "text-emerald-300" },
-        { name: "Visual Studio Code", category: "tools", icon: DiVisualstudio, color: "text-blue-400" },
+        { name: "PHP", category: "backend", icon: SiPhp, color: "text-indigo-400 bg-indigo-400/15" },
+        { name: "Laravel", category: "backend", icon: TbBrandLaravel, color: "text-red-400 bg-red-400/15" },
+        { name: "Java", category: "backend", icon: RiJavaLine, color: "text-orange-400 bg-orange-400/15" },
+        { name: "TypeScript", category: "frontend", icon: BiLogoTypescript, color: "text-blue-400 bg-blue-400/15" },
+        { name: "React", category: "frontend", icon: RiReactjsLine, color: "text-cyan-400 bg-cyan-400/15" },
+        { name: "Next.js", category: "frontend", icon: RiNextjsFill, color: "text-slate-200 bg-slate-200/15" },
+        { name: "JavaScript", category: "frontend", icon: BiLogoJavascript, color: "text-yellow-400 bg-yellow-400/15" },
+        { name: "MySQL", category: "backend", icon: TbBrandMysql, color: "text-blue-500 bg-blue-500/15" },
+        { name: "PostgreSQL", category: "backend", icon: BiLogoPostgresql, color: "text-cyan-500 bg-cyan-500/15" },
+        { name: "Docker", category: "tools", icon: SiDocker, color: "text-sky-400 bg-sky-400/15" },
+        { name: "Linux", category: "tools", icon: FcLinux, color: "text-emerald-400 bg-emerald-400/15" },
+        { name: "Git", category: "tools", icon: FaGitAlt, color: "text-orange-500 bg-orange-500/15" },
+        { name: "TanStack (Router/Query)", category: "frontend", icon: SiTanstack, color: "text-amber-400 bg-amber-400/15" },
+        { name: "Tailwind CSS", category: "frontend", icon: SiTailwindcss, color: "text-teal-400 bg-teal-400/15" },
+        { name: "HTML", category: "frontend", icon: SiHtml5, color: "text-orange-600 bg-orange-600/15" },
+        { name: "Vite", category: "frontend", icon: SiVite, color: "text-purple-400 bg-purple-400/15" },
+        { name: "OpenAPI / Swagger", category: "tools", icon: SiSwagger, color: "text-emerald-300 bg-emerald-300/15" },
+        { name: "Visual Studio Code", category: "tools", icon: DiVisualstudio, color: "text-blue-400 bg-blue-400/15" },
     ],
     projects: [
     {
