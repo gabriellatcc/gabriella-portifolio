@@ -15,10 +15,10 @@ export function SkillsSection() {
   const iconBoxClasses = `h-8 w-8 rounded border border-border p-1`;
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills">
       <Tabs defaultValue="all" className="w-full">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="space-y-2">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between border-b-1 border-foreground/20 pb-3">
+          <div className="space">
             <div className="flex items-center gap-3">
               <FaLayerGroup className="size-10 shrink-0 text-chart-1" />
               <h2 className="text-3xl font-bold tracking-tight">
@@ -47,7 +47,7 @@ export function SkillsSection() {
           <TabsContent
             key={c.value}
             value={c.value}
-            className="mt-6 data-[state=active]:animate-in data-[state=active]:fade-in-0 data-[state=active]:slide-in-from-bottom-2 data-[state=active]:duration-300"
+            className="mt-3 data-[state=active]:animate-in data-[state=active]:fade-in-0 data-[state=active]:slide-in-from-bottom-2 data-[state=active]:duration-300"
           >
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
               {portfolioData.skills
