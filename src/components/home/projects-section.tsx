@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/spell-ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 
 import { portfolioData } from "@/lib/site-content";
@@ -22,7 +22,7 @@ export function ProjectsSection() {
         {projects.map((p) => (
           <TabsContent key={p.id} value={p.id} className="space-y-4">
             <div>
-              <Badge>{p.badge}</Badge>
+              <Badge variant="purple">{p.badge}</Badge>
               <h3 className="mt-2 text-2xl font-semibold">{p.title}</h3>
               <p className="text-sm text-muted-foreground">
                 {p.subtitle} · {p.period}
@@ -39,7 +39,7 @@ export function ProjectsSection() {
 
             <div className="flex flex-wrap gap-2">
               {p.techStack.map((t) => (
-                <Badge key={t} variant="outline">{t}</Badge>
+                <Badge key={t} variant="blue">{t}</Badge>
               ))}
             </div>
           </TabsContent>

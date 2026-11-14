@@ -26,7 +26,7 @@ export function Header() {
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex items-stretch justify-between gap-4 w-full min-w-0">
                     <div className="min-w-0 shrink flex items-center py-3 text-base sm:text-xl lg:text-2xl gap-0.5 font-bold text-foreground/90 group whitespace-nowrap">
-                        <span className="text-primary transition-transform group-hover:-translate-x-0.5">
+                        <span className="text-foreground transition-transform group-hover:-translate-x-0.5">
                             &lt;
                         </span>
                         <span className="truncate text-foreground transition-transform duration-200 group-hover:scale-101">
