@@ -1,8 +1,7 @@
 import { Timeline } from "@/components/aceternity-ui/timeline";
 import { Badge } from "@/components/spell-ui/badge";
 import { portfolioData } from "@/lib/site-content";
-import { FaBriefcase } from "react-icons/fa";
-
+import { IconBriefcase } from "@tabler/icons-react";
 export function ExperienceSection() {
     const data = portfolioData.experiences.map((exp) => ({
         title: exp.period,
@@ -45,7 +44,7 @@ export function ExperienceSection() {
         <section id="experience">
         <div className="border-b border-foreground/20 pb-3">
             <div className="flex items-center gap-3">
-            <FaBriefcase className="size-10 shrink-0 text-chart-2" />
+            <IconBriefcase className="size-10 shrink-0 text-chart-2" />
             <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
             </div>
             <p className="text-muted-foreground">

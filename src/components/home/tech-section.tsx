@@ -2,7 +2,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { portfolioData } from "@/lib/site-content";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaLayerGroup } from "react-icons/fa";
+import { IoLayersOutline } from "react-icons/io5";
 
 const categories = [
   { value: "all", label: "All" },
@@ -20,7 +20,7 @@ export function SkillsSection() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between border-b-1 border-foreground/20 pb-3">
           <div className="space">
             <div className="flex items-center gap-3">
-              <FaLayerGroup className="size-10 shrink-0 text-chart-1" />
+              <IoLayersOutline className="size-10 shrink-0 text-chart-1" />
               <h2 className="text-3xl font-bold tracking-tight">
                 Technical Stack & Skills
               </h2>
