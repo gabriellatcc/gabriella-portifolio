@@ -42,6 +42,7 @@ export interface Education {
     degree: string;
     institution: string;
     period: string;
+    details: string;
     gpa: string;
     relevantCoursework: string[];
 }
@@ -216,7 +217,9 @@ export const portfolioData: DeveloperProfile = {
     education: {
         degree: "Systems Analysis & Development",
         institution: "Fatec Cruzeiro Prof. Waldomiro May",
-        period: "Feb 2024 – Dec 2026",
+        period: "Feb 2024 – Present (Active until 2028)",
+        details:
+        "Core coursework completed with active enrollment (eligible for internships through 2028) and ready for Junior full-stack positions.",
         gpa: "8.21 / 10",
         relevantCoursework: [
         "Databases",
