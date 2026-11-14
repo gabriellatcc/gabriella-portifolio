@@ -10,15 +10,11 @@ import {
     CardContent
 } from "../ui/card";
 import { portfolioData } from "@/lib/site-content";
-import {
-    IconCalendar,
-    IconAward,
-    IconExternalLink
-} from "@tabler/icons-react";
 import { PiStudentBold } from "react-icons/pi";
+import { IconCalendar, IconAward, IconExternalLink, IconLanguage } from "@tabler/icons-react";
 
 export function EducationSection() {
-    const { education } = portfolioData;
+    const { education, languages } = portfolioData;
 
     return (
         <section className="space-y-4">
@@ -99,9 +95,43 @@ export function EducationSection() {
                         </div>
                     </CardFooter>
                 </Card>
-                <Card className="border-border/80 shadow-md">
-                    <CardContent className="pt-6">
-                        teste
+                <Card className="relative overflow-hidden border-border/80 shadow-md transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-chart-1 to-chart-4" />
+                    <CardHeader className="pb-3">
+                        <div className="flex items-center gap-2.5">
+                            <IconLanguage className="size-6 text-chart-1" />
+                            <div>
+                                <CardTitle className="text-xl font-bold leading-snug">
+                                    Languages
+                                </CardTitle>
+                                <CardDescription className="text-sm font-medium text-muted-foreground">
+                                    Communication & proficiency levels
+                                </CardDescription>
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        {languages.map((lang) => (
+                            <div key={lang.name} className="space-y-1.5">
+                                <div className="flex items-center justify-between text-sm">
+                                    <span className="font-medium text-foreground">
+                                        {lang.name}
+                                    </span>
+                                    <Badge
+                                        variant="secondary"
+                                        className="border border-border/60 bg-secondary/60 text-xs font-normal"
+                                    >
+                                        {lang.level}
+                                    </Badge>
+                                </div>
+                                <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
+                                    <div
+                                        className="h-full rounded-full bg-gradient-to-r from-primary to-chart-1 transition-all duration-500"
+                                        style={{ width: `${lang.percentage}%` }}
+                                    />
+                                </div>
+                            </div>
+                        ))}
                     </CardContent>
                 </Card>
             </div>

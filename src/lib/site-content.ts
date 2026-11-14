@@ -235,6 +235,7 @@ export const portfolioData: DeveloperProfile = {
     languages: [
         { name: "English", level: "Intermediate", percentage: 65 },
         { name: "Spanish", level: "Basic", percentage: 35 },
+        { name: "Russian", level: "Basic", percentage: 35 },
         { name: "Portuguese", level: "Native", percentage: 100 },
     ],
 };
