@@ -10,24 +10,24 @@ export const Route = createFileRoute('/')({
 
 function RouteComponent() {
   return (
-    <div className="flex flex-col gap-2 p-3">
-      {/* <section id="about">
+    <div className="flex flex-col gap-2 p-3 pt-24">
+      {/* <section id="about" className="scroll-mt-24">
         <AboutSection />
-      </section>*/}
+      </section> */}
 
-      <section id="tech-stack">
+      <section id="tech-stack" className="scroll-mt-24">
         <SkillsSection />
       </section>
 
-      <section id="projects">
+      <section id="projects" className="scroll-mt-24">
         <ProjectsSection />
       </section>
 
-      <section id="experience">
+      <section id="experience" className="scroll-mt-24">
         <ExperienceSection />
       </section>
       {/*
-      <section id="education">
+      <section id="education" className="scroll-mt-24">
         <EducationSection />
       </section> */}
     </div>

@@ -97,7 +97,7 @@ export const portfolioData: DeveloperProfile = {
         { name: "Java", category: "backend", icon: RiJavaLine, color: "text-orange-400 bg-orange-400/15" },
         { name: "TypeScript", category: "frontend", icon: BiLogoTypescript, color: "text-blue-400 bg-blue-400/15" },
         { name: "React", category: "frontend", icon: RiReactjsLine, color: "text-cyan-400 bg-cyan-400/15" },
-        { name: "Next.js", category: "frontend", icon: RiNextjsFill, color: "text-slate-200 bg-slate-200/15" },
+        { name: "Next.js", category: "frontend", icon: RiNextjsFill, color: "text-black bg-black/15 dark:bg-slate-200/15 dark:text-slate-200" },
         { name: "JavaScript", category: "frontend", icon: BiLogoJavascript, color: "text-yellow-400 bg-yellow-400/15" },
         { name: "MySQL", category: "backend", icon: TbBrandMysql, color: "text-blue-500 bg-blue-500/15" },
         { name: "PostgreSQL", category: "backend", icon: BiLogoPostgresql, color: "text-cyan-500 bg-cyan-500/15" },
