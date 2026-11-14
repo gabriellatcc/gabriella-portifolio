@@ -2,7 +2,6 @@ import {
     createRootRoute,
     Outlet,
 } from '@tanstack/react-router'
-import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { NotFound } from '@/components/handlers/not-found'
 import { RootError } from '@/components/handlers/root-error'
@@ -21,7 +20,6 @@ export const Route = createRootRoute({
             style={{ zIndex: 0 }}
             />
             <div className="relative z-10 flex flex-col min-h-screen">
-                {/* <Header /> */}
                 <FloatingNavDemo/>
                 <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
                     <Outlet />
