@@ -8,7 +8,7 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="py-20">
-      <h2 className="mb-8 text-3xl font-bold">Projects</h2>
+      <h2 className="mb-8 text-3xl font-bold">Featured Projects</h2>
 
       <Tabs defaultValue={projects[0].id}>
         <TabsList className="h-auto w-full justify-start overflow-x-auto">

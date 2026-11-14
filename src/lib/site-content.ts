@@ -175,29 +175,43 @@ export const portfolioData: DeveloperProfile = {
         },
     ],
     experiences: [
-    {
-        role: "Full-Stack Development Intern",
-        company: "Next Tecnologia",
-        period: "Jan 2026 – Apr 2026",
-        location: "Cruzeiro, SP",
-        responsibilities: [
-            "Developed and refactored RESTful APIs in Laravel for decoupled module architecture, establishing Cron Jobs for automated synchronization.",
-            "Designed and implemented responsive client metrics dashboards in React and TypeScript within scheduled delivery timelines.",
-            "Applied Git best practices for commits, pipelines, and code reviews; configured Docker containers on Linux environments for seamless deployments.",
-        ],
-        technologies: ["PHP / Laravel", "React", "TypeScript", "Docker", "Linux"],
-    },
-    {
-        role: "Technical Support Assistant",
-        company: "Liliane Tavares FOTOGRAFIA",
-        period: "Apr 2019 – Dec 2024",
-        location: "Itanhandu, MG",
-        responsibilities: [
-            "Configured workstation hardware/software infrastructure for event operations under tight deadlines.",
-            "Managed service documentation, scheduling, and process traceability using Microsoft Word & Excel.",
-            "Gathered public feedback to redesign equipment signage and workflow, significantly reducing operational support tickets.",
-        ],
-    },
+        {
+            role: "Freelance Web Developer & Technical Support",
+            company: "Doctive",
+            period: "Mar 2026 – Present",
+            location: "Remote",
+            responsibilities: [
+                "Provide end-to-end technical support and operational guidance to the business owner, troubleshooting daily platform workflows, payment methods, and NF-e (Webmania) tax emission issues.",
+                "Manage account recovery, credential restructuring, and Two-Factor Authentication (2FA) across critical platforms (Hostinger, Microsoft, WordPress, Correios, Instagram).",
+                "Configure transactional email infrastructure (SMTP) and audit DNS records (SPF, DKIM, DMARC) to resolve email deliverability issues.",
+                "Develop custom PHP/JS scripts and third-party API integrations to extend WooCommerce functionality, resolving checkout, caching (WP Rocket), and theme layout inconsistencies.",
+                "Perform scheduled backups, log audits, and compatibility-tested updates for WordPress core, themes, and plugins, documenting all interventions for full traceability.",
+            ],
+            technologies: ["PHP", "WordPress", "WooCommerce", "DNS / SMTP", "REST APIs", "Technical Support"],
+        },
+        {
+            role: "Full-Stack Development Intern",
+            company: "Next Tecnologia",
+            period: "Jan 2026 – Apr 2026",
+            location: "Cruzeiro, SP",
+            responsibilities: [
+                "Developed and refactored RESTful APIs in Laravel for decoupled module architecture, establishing Cron Jobs for automated synchronization.",
+                "Designed and implemented responsive client metrics dashboards in React and TypeScript within scheduled delivery timelines.",
+                "Applied Git best practices for commits, pipelines, and code reviews; configured Docker containers on Linux environments for seamless deployments.",
+            ],
+            technologies: ["PHP / Laravel", "React", "TypeScript", "Docker", "Linux"],
+        },
+        {
+            role: "Technical Support Assistant",
+            company: "Liliane Tavares FOTOGRAFIA",
+            period: "Apr 2019 – Dec 2024",
+            location: "Itanhandu, MG",
+            responsibilities: [
+                "Configured workstation hardware/software infrastructure for event operations under tight deadlines.",
+                "Managed service documentation, scheduling, and process traceability using Microsoft Word & Excel.",
+                "Gathered public feedback to redesign equipment signage and workflow, significantly reducing operational support tickets.",
+            ],
+        },
     ],
     education: {
         degree: "Systems Analysis & Development",
